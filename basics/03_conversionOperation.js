@@ -1,3 +1,5 @@
+// ************************************  conversion******************************
+
 let score = "33abc"; 
 
 console.log(typeof score);
@@ -26,4 +28,18 @@ console.log(Number(x));
 
 
 
+// ****************************************** operation  **************************
+
+let value = 3;
+let negval = -3;
+
+console.log(negval);
+console.log(2**2);
+let str= "helloo";
+let str1 = "Rafsun"
+
+let str3 = str+" "+str1;
+console.log(str3);
+
+console.log(+true);
 
