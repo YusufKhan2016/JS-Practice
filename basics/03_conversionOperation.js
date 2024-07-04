@@ -18,4 +18,12 @@ console.log(Number(x));
 
 // after converting x in number it will return 1;
 
+// exmple:
+
+// "33"= 33;
+// "33abc" =NaN
+// true => 1; false=> 0;
+
+
+
 
