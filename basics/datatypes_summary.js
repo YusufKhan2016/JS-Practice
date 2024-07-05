@@ -40,3 +40,15 @@ const myfuntion = function ( ){
 console.log(typeof heros);
 
     
+// *********************** STACK ************ HEAP ***************
+
+/*there are two types of memory :
+
+1. Stack (Primitive),
+2. Heap ( Non-primitive) */
+
+let youtubuename = "hiteshchowdhary";
+
+let anothername = youtubuename;
+
+anothername = "Rafsun"
