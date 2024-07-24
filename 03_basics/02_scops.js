@@ -5,7 +5,7 @@ var c= 30;
 if (true) {
     let a = 10;
     const b = 20;
-    console.log("INNER:", a);
+    // console.log("INNER:", a);
 }
 
 // console.log(a);
@@ -30,11 +30,26 @@ if(true) {
     const username = "carfew";
     if (username === "carfew") {
         const website = "lockdown";
-        console.log(username+website);
+        // console.log(username+website);
     }
     // console.log(website);
 }
 
 // console.log(username);
 
+
+// ++++++++++++++++++++++++++++++++++++++++++++interesting ++++++++++++++++++++++
+
+
+function add (num) {
+    return num + 1;
+}
+
+add(4);
+
+const addTwo = function(num) {
+    return num+2;
+}
+
+addTwo(4);
 
