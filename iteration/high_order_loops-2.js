@@ -13,6 +13,17 @@ for (const key in myObject) {
 const programming = ["js", "rb", "py", "java", "cpp"];
 
 for(const k in programming){
-    console.log(programming[k]);
-    console.log(k);
+    // console.log(programming[k]);
+    // console.log(k);
+}
+
+const map = new Map()
+
+map.set('BDT','Taka')
+map.set('BDT','Taka')
+map.set('INR','Rupee')
+map.set('USD', 'Dollar')
+
+for (const key in map) {
+    console.log(key);
 }
