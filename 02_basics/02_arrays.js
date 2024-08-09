@@ -2,11 +2,11 @@ const marvel_heros = ["thor", "ironman","spiderman"];
 
 const de_heros = ["superman","flash", "batman"];
 
-// marvel_heros.push(de_heros);
-// console.log(marvel_heros);
-// console.log(marvel_heros[3][1]);
+marvel_heros.push(de_heros);
+console.log(marvel_heros);
+console.log(marvel_heros[3][1]);
 
-// const allHeros = marvel_heros.concat(de_heros);
+const allHeros = marvel_heros.concat(de_heros);
 const all_new_heros =  [...de_heros,...marvel_heros];
 
 const another_array = [1,2,3,[4,5,6],7,[6,7,[4,5]]];
