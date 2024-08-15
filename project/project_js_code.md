@@ -1,4 +1,4 @@
-#Projects related to DOM
+###Projects related to DOM
 
 #Project link
 [Click here](https://stackblitz.com/edit/dom-project-chaiaurcode?file=index.html) for practice
@@ -6,7 +6,7 @@
 
 #solution code
 
-#Project 1 ===> Color changer
+##Project 1 ===> Color changer
 
 ```javascript
 
@@ -28,7 +28,7 @@ buttons.forEach((x)=>{
 
 ```
 
-#Project 2 ===> BMI CALCULATOR
+##Project 2 ===> BMI CALCULATOR
 
 ```javascript
 
