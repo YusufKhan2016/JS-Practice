@@ -21,10 +21,36 @@ buttons.forEach((x)=>{
     if(e.target.id === 'white') body.style.backgroundColor = e.target.id;
     if(e.target.id === 'blue') body.style.backgroundColor = e.target.id;
     if(e.target.id === 'yellow') body.style.backgroundColor = e.target.id;
-    
 
   });
 });
 
 
 ```
+
+#Project 2 ===> BMI CALCULATOR
+
+```javascript
+
+const form = document.querySelector('form');
+
+form.addEventListener('submit',(x)=>{
+  x.preventDefault();
+  const height = parseInt(document.querySelector('#height').value);
+  const weight = parseInt(document.querySelector('#weight').value);
+  if(height === '' || isNaN(height) || height<0 || weight=== '' || isNaN(weight) ||weight<0) {
+    results.innerHTML = 'Please Enter a valid number';
+  }else {
+    const bmi = (weight/((height*height)/10000)).toFixed(2);
+    results.innerHTML=`<span>${bmi}</span>`;
+    if(bmi<18.6) weightResult.innerHTML = `<span>Under weight</span>`;
+    else if(bmi >=18.6 && bmi <=24.9) weightResult.innerHTML = `<span>Normal Weight</span>`;
+    else weightResult.innerHTML = `<span>Over Weight</span>`
+  }
+
+  
+});
+
+
+```
+
