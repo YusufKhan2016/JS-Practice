@@ -1,12 +1,13 @@
-### Projects related to DOM
+# Projects related to DOM
 
-# Project link
+## Project link
 [Click here](https://stackblitz.com/edit/dom-project-chaiaurcode?file=index.html) for practice
 
 
 # solution code
 
-## Project 1 ===> Color changer
+### Project 1 ===> Color changer
+
 
 ```javascript
 
@@ -28,7 +29,7 @@ buttons.forEach((x)=>{
 
 ```
 
-## Project 2 ===> BMI CALCULATOR
+### Project 2 ===> BMI CALCULATOR
 
 ```javascript
 
@@ -54,7 +55,7 @@ form.addEventListener('submit',(x)=>{
 
 ```
 
-## Project 3 ===> Digital Clock
+### Project 3 ===> Digital Clock
 
 ```javascript
 
@@ -67,4 +68,19 @@ setInterval(() => {
 }, 1000);
 
 ```
+
+
+### Project 4 ===> Random Number guessing
+
+``` javascript
+let randomNumber = parseInt(Math.random()*100+1);
+const userInput = document.querySelector('#guessField');
+const guessSlot = document.querySelector('.guesses');
+const remaining = document.querySelector('.lastResult');
+const loworHi = document.querySelector('.lowOrHi');
+const startOver = document.querySelector('.resultParas');
+const p = document.createElement('p');
+
+```
+
 
