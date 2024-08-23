@@ -19,13 +19,13 @@
    </div>
 </body>
 <script>
-    document.getElementById('owl').onclick = ()=>{
-        alert("owl clicked");
-    }
+    //document.getElementById('owl').onclick = ()=>{
+    //    alert("owl clicked");
+    //}
 
     // addEventListener method is better than oneclick method.
     
-
+    //event topics need to know ==>
     //type,timestamp, defaultprevented
     //target, toElement, srcElement, currentTerget,
     // clientX, clientY, screenX, screenY
@@ -34,12 +34,38 @@
 
     //====================================== event propagation ===============================
      
-    document.getElementById('images').addEventListener('click',(e)=>{
-        alert("clicked inside in the Ul");
-    },false);
-    document.getElementById('owl').addEventListener('click',(e)=>{
-        alert("owl clicked");
-    },false);
+    //document.getElementById('images').addEventListener('click',(e)=>{
+    //    alert("clicked inside in the Ul");
+    //},false);
+
+    //in this statement if we click on owl that will propagate to the upper id images ;
+    //document.getElementById('owl').addEventListener('click',(e)=>{
+    //    alert("owl clicked");
+    //},false);
+
+    // in this statement the stopPropagation method will stop the id to got parent id ;
+    //document.getElementById('owl').addEventListener('click',function(e){
+    //    console.log("owl clicked");
+    //    e.stopPropagation();
+    //})
+
+    //document.getElementById('google').addEventListener('click',function(e) {
+    //    e.stopPropagation();
+    //    console.log("google clicked");
+    //    e.preventDefault();
+    //})
+
+    document.getElementById('images').addEventListener('click',function(e) {
+        console.log(e.target.tagName);
+        if(e.target.tagName === 'IMG') {
+            console.log(e.target.id);
+            let removeit = e.target.parentNode;
+            removeit.remove();
+            
+        }
+        console.log(removeit);
+    })
+
 
 </script>
 </html>
