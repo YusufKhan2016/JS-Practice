@@ -163,3 +163,38 @@ function newGame() {
 ```
 
 
+### Project 5 ===>  Unlimited colors
+
+myOwn made code 
+
+``` javascript
+const start = document.querySelector('#start');
+const stop = document.querySelector('#stop');
+
+function colorChanger() {
+  const hexVal = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'A', 'B', 'C', 'D', 'E', 'F'];
+  let generator= "";
+  
+  for(let i =0;i<6;i++) {
+    const colorValue = hexVal[Math.floor(Math.random()*16)];
+    generator+= colorValue;
+  }
+  
+  return `#${generator}`;
+}
+start.addEventListener('click',function() {
+  const x=setInterval(function(){
+    document.body.style.backgroundColor = colorChanger();
+    // console.log(colorChanger());
+  },1000);
+  stop.addEventListener('click',function(){
+    clearInterval(x);
+  })
+})
+
+// console.log(colorChanger());
+
+```
+
+
+

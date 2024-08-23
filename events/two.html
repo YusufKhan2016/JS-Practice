@@ -10,16 +10,21 @@
     <button id="stop">stop</button>
 </body>
 <script>
-    <!-- setTimeout( ()=>{
-        console.log("Rafsun is learing javascript by Hitesh sir")
-    },4000); -->
+    //setTimeout( ()=>{
+    //    console.log("Rafsun is learing javascript by Hitesh sir")
+    //},4000);
     const funcReference = function() {
         console.log("rafsun is checkin this code");
     }
-    const funcReference2 = function() {
+    const changeText = function() {
         document.querySelector('h1').innerHTML = "best JS series of Hitesh sir";
     }
-    setTimeout(funcReference2,5000);
+    const changeMe = setTimeout(changeText,5000);
+    
+    const x= document.querySelector('#stop').addEventListener('click',()=>{
+        clearTimeout(changeMe);
+        console.log("STOPPED");
+    });
 
 
 
