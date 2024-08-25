@@ -1,5 +1,5 @@
-const name= document.querySelector('.name');
-const followers = document.querySelector('.followers');
+const nickname= document.querySelector('.name');
+const follower = document.querySelector('.followers');
 const picture = document.querySelector('.profile-picture');
 const button = document.querySelector('.btn');
 
@@ -10,10 +10,25 @@ xhr.open('Get',requestURL);
 xhr.onreadystatechange = function () {
     if(xhr.readyState === 4) {
         data = JSON.parse(this.responseText);
-        console.log(data.avatar_url);
         button.addEventListener('click',function(){
-            picture.innerHTML = '<img class="pic" src="https://avatars.githubusercontent.com/u/11613311?v=4" alt="">'
-            
+
+            // image section edit 
+
+
+            console.log(data);
+            picture.innerHTML = '';
+            const pic = document.createElement('img');
+            pic.src = data.avatar_url;
+            pic.className = "pic";
+            // pic.style.borderRadius = "50%"
+            picture.appendChild(pic);
+
+
+            // text section edit 
+            nickname.textContent = data.name;
+
+            follower.textContent = data.followers;
+
         });
     }
 }
