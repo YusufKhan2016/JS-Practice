@@ -34,28 +34,28 @@ promiseThree.then((x)=>{
     // console.log(x); // print the data of resolve from promise object;
 })
 
-const promiseFour = new Promise((resolve,reject)=> {
-    setTimeout(() => {
-        let error = false;
-        if(!error) {
-            resolve({username:"rafsun", age: 20});
-        }else {
-            reject("error: something went wrong");
-        }
-    }, 0);
-})
+// const promiseFour = new Promise((resolve,reject)=> {
+//     setTimeout(() => {
+//         let error = false;
+//         if(!error) {
+//             resolve({username:"rafsun", age: 20});
+//         }else {
+//             reject("error: something went wrong");
+//         }
+//     }, 0);
+// })
 
-promiseFour
-.then((user) => {
-    console.log(user);
-    return user.username;
-})
-.then((myusername) =>{
-    console.log(myusername);
-})
-.catch((error) => {
-    console.log(error);
-}).finally(()=>{console.log("the promise finally either resolved or rejected")})
+// promiseFour
+// .then((user) => {
+//     console.log(user);
+//     return user.username;
+// })
+// .then((myusername) =>{
+//     console.log(myusername);
+// })
+// .catch((error) => {
+//     console.log(error);
+// }).finally(()=>{console.log("the promise finally either resolved or rejected")})
 
 // here the then is for callback for resolve or rejection
 // and the catch is for callback rejection
@@ -63,14 +63,36 @@ promiseFour
 // happens the finally callback will execute 
 
 const promiseFive = new Promise((resolve,reject)=> {
-    setTimeout(() => {
-        let error = false;
-        if(!error) {
-            resolve({username:"javascript", password: "123"});
-        }else {
-            reject("error: JS went wrong");
-        }
-    }, 0);
+    // setTimeout(() => {
+    //     let error = true;
+    //     if(!error) {
+    //         resolve({username:"javascript", password: "123"});
+    //     }else {
+    //         reject("error: JS went wrong");
+    //     }
+    // }, 0);
 })
 
+// consuming the promising  using async keyword
 
+async function consumePromisingFive() {
+    // try {
+        // const response = await promiseFive;
+        // console.log(response);
+        
+    // } catch (error) {
+    //     console.log(error);
+    // }
+}
+
+// consumePromisingFive();
+
+
+fetch("https://api.github.com/users/hiteshchoudhary")
+.then((response)=>{
+    return response.json();
+}) 
+.then((data)=> {
+    console.log(data);
+})
+.catch((error)=> console.log(error));
