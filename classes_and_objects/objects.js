@@ -41,5 +41,5 @@ This means tha is has access to properties and methods defined on the constructo
 
 
 The constructor is called: The constructor function is called with the specified arguments and this is bound
-to newly created object. If no explicit return value is 
+to newly created object. If no explicit value is return.
 */
