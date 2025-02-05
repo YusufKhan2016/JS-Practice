@@ -30,6 +30,14 @@ console.log(arrTwo);
 console.log(arrTwo.length);
 console.log(arrTwo[9]);
 
+/*
+optimised elements :
+
+SMI > DOUBLE > HOLES 
+
+
+*/
+
 
 
 
