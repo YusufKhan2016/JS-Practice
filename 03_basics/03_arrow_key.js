@@ -7,27 +7,27 @@ const user = {
     }
 }
 
-// user.welcomePage();
-// user.username = "yusuf khan";
-// user.welcomePage();
+user.welcomePage();
+user.username = "yusuf khan";
+user.welcomePage();
 
-// console.log(this);
+console.log(this);
 
-// function chai() {
-//     const username = "rafsun";
-//     console.log(this);
-// }
+function chai() {
+    const username = "rafsun";
+    console.log(this);
+}
 
-// chai();
+chai();
 
-// const chai = () => {
-//     let username = "yusuf khan";
-//     // console.log(this.username);
-//     console.log(this);
+const chai = () => {
+    let username = "yusuf khan";
+    // console.log(this.username);
+    console.log(this);
 
-// }
+}
 
-// chai();
+chai();
 
 
 // ++++++++++++ arrow funtion ++++++
